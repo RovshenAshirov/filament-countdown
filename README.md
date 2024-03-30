@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/RovshenAshirov/filament-countdown.svg?style=flat-square)](https://packagist.org/packages/RovshenAshirov/filament-countdown)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/RovshenAshirov/filament-countdown/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/RovshenAshirov/filament-countdown/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/RovshenAshirov/filament-countdown/fix-php-code-styling.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/RovshenAshirov/filament-countdown/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/RovshenAshirov/filament-countdown/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/RovshenAshirov/filament-countdown/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/RovshenAshirov/filament-countdown.svg?style=flat-square)](https://packagist.org/packages/RovshenAshirov/filament-countdown)
 
 Add beautiful and customizable countdown fields and columns to Filament forms and tables.
