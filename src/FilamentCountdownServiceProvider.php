@@ -10,8 +10,6 @@ use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Filesystem\Filesystem;
 use Livewire\Features\SupportTesting\Testable;
-use Rovshen\FilamentCountdown\Commands\FilamentCountdownCommand;
-use Rovshen\FilamentCountdown\Testing\TestsFilamentCountdown;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -24,18 +22,11 @@ class FilamentCountdownServiceProvider extends PackageServiceProvider
 
     public function configurePackage(Package $package): void
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
         $package->name(static::$name)
             ->hasCommands($this->getCommands())
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
                     ->publishConfigFile()
-                    ->publishMigrations()
-                    ->askToRunMigrations()
                     ->askToStarRepoOnGitHub('RovshenAshirov/filament-countdown');
             });
 
@@ -43,10 +34,6 @@ class FilamentCountdownServiceProvider extends PackageServiceProvider
 
         if (file_exists($package->basePath("/../config/{$configFileName}.php"))) {
             $package->hasConfigFile();
-        }
-
-        if (file_exists($package->basePath('/../database/migrations'))) {
-            $package->hasMigrations($this->getMigrations());
         }
 
         if (file_exists($package->basePath('/../resources/lang'))) {
@@ -86,9 +73,6 @@ class FilamentCountdownServiceProvider extends PackageServiceProvider
                 ], 'filament-countdown-stubs');
             }
         }
-
-        // Testing
-        Testable::mixin(new TestsFilamentCountdown());
     }
 
     protected function getAssetPackageName(): ?string
@@ -113,9 +97,7 @@ class FilamentCountdownServiceProvider extends PackageServiceProvider
      */
     protected function getCommands(): array
     {
-        return [
-            FilamentCountdownCommand::class,
-        ];
+        return [];
     }
 
     /**
