@@ -5,49 +5,53 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/RovshenAshirov/filament-countdown/fix-php-code-styling.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/RovshenAshirov/filament-countdown/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/RovshenAshirov/filament-countdown.svg?style=flat-square)](https://packagist.org/packages/RovshenAshirov/filament-countdown)
 
-
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Add beautiful and customizable countdown fields and columns to Filament forms and tables.
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require RovshenAshirov/filament-countdown
+composer require Rovshen/filament-countdown
 ```
 
-You can publish and run the migrations with:
+Publish the assets so the styles are correct:
 
 ```bash
-php artisan vendor:publish --tag="filament-countdown-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="filament-countdown-config"
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="filament-countdown-views"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
+php artisan filament-countdown:install
 ```
 
 ## Usage
 
+You can add a countdown field to your forms like this:
+
 ```php
-$filamentCountdown = new RovshenAshirov\FilemantCountdown();
-echo $filamentCountdown->echoPhrase('Hello, RovshenAshirov!');
+use Rovshen\FilamentCountdown\Components\Countdown;
+
+$form->schema([
+    Countdown::make(),
+]);
 ```
+
+You can add a countdown column to your tables like this:
+
+```php
+use Rovshen\FilamentCountdown\Columns\CountdownColumn;
+
+$table->schema([
+    CountdownColumn::make(),
+]);
+```
+
+You can add a countdown entry to your infolists like this:
+
+```php
+use Rovshen\FilamentCountdown\Entries\CountdownEntry;
+
+$infolist->schema([
+    CountdownEntry::make(),
+]);
+
 
 ## Testing
 
