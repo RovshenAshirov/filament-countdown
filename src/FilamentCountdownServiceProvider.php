@@ -10,11 +10,11 @@ use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Filesystem\Filesystem;
 use Livewire\Features\SupportTesting\Testable;
+use Rovshen\FilamentCountdown\Commands\FilamentCountdownCommand;
+use Rovshen\FilamentCountdown\Testing\TestsFilamentCountdown;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Rovshen\FilamentCountdown\Commands\FilamentCountdownCommand;
-use Rovshen\FilamentCountdown\Testing\TestsFilamentCountdown;
 
 class FilamentCountdownServiceProvider extends PackageServiceProvider
 {
