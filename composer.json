@@ -1,21 +1,22 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "rovshen/filament-countdown",
+    "description": "Add countdown fields and columns to Filament forms and tables",
     "keywords": [
-        ":vendor_name",
+        "RovshenAshirov",
         "laravel",
-        ":package_slug"
+        "filament-countdown"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/RovshenAshirov/filament-countdown",
     "support": {
-        "issues": "https://github.com/:vendor_slug/:package_slug/issues",
-        "source": "https://github.com/:vendor_slug/:package_slug"
+        "issues": "https://github.com/RovshenAshirov/filament-countdown/issues",
+        "source": "https://github.com/RovshenAshirov/filament-countdown"
     },
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "RovshenAshirov",
+            "email": "rovshenashirov1619@gmail.com",
             "role": "Developer"
         }
     ],
@@ -37,17 +38,13 @@
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
+        "spatie/laravel-ray": "^1.26",
+        "pestphp/pest-plugin-laravel": "^2.0"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Rovshen\\FilamentCountdown\\": "src/",
+            "Rovshen\\FilamentCountdown\\Database\\Factories\\": "database/factories/"
         }
     },
     "scripts": {
@@ -67,10 +64,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Rovshen\\FilamentCountdown\\FilamentCountdownServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "FilamentCountdown": "Rovshen\\FilamentCountdown\\Facades\\FilamentCountdown"
             }
         }
     },

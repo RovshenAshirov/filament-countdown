@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Rovshen\FilamentCountdown\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class FilamentCountdownCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'filament-countdown';
 
     public $description = 'My command';
 
