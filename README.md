@@ -23,15 +23,6 @@ php artisan filament-countdown:install
 
 ## Usage
 
-You can add a countdown field to your forms like this:
-
-```php
-use Rovshen\FilamentCountdown\Components\Countdown;
-
-$form->schema([
-    Countdown::make(),
-]);
-```
 
 You can add a countdown column to your tables like this:
 
@@ -39,18 +30,9 @@ You can add a countdown column to your tables like this:
 use Rovshen\FilamentCountdown\Columns\CountdownColumn;
 
 $table->schema([
-    CountdownColumn::make(),
+    CountdownColumn::make('deadline'),
 ]);
 ```
-
-You can add a countdown entry to your infolists like this:
-
-```php
-use Rovshen\FilamentCountdown\Entries\CountdownEntry;
-
-$infolist->schema([
-    CountdownEntry::make(),
-]);
 
 
 ## Testing

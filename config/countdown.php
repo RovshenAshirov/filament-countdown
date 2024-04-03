@@ -1,6 +1,6 @@
 <?php
 
-// config for RovshenAshirov/FilamentCountdown
+// config for Rovshen/FilamentCountdown
 return [
 
 ];
